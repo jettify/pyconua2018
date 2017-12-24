@@ -1,13 +1,50 @@
 \documentclass{beamer}
-\usetheme{metropolis}           % Use metropolis theme
-\title{A minimal example}
+\usetheme[titleformat=allcaps]{metropolis}           % Use metropolis theme
+
+% make title separator line invisible
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{0pt}
+\makeatother
+
+% make background color wihite so avatar
+% background blend with background color
+\setbeamercolor{background canvas}{bg=white}
+\usepackage{appendixnumberbeamer}
+
+% setup default font
+\usefonttheme{serif} % default family is serif
+\usepackage{fontspec}
+\setmainfont{Cochin}
+
+\title{Introduction To \\ Distributed Tracing}
 \date{\today}
 \author{Nickolai Novik}
-\institute{Introduction To Distributed Tracing}
+\institute{DataRobot}
+\titlegraphic{\hspace*{5cm} \includegraphics[height=8.5cm]{figures/avatar.pdf}}
+% =========================================================================== %
 \begin{document}
   \maketitle
+
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Table of contents}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[hideallsubsections]
+  \end{frame}
+% --------------------------------------------------------------------------- %
   \section{First Section}
+% --------------------------------------------------------------------------- %
   \begin{frame}{First Frame}
     Hello, world!
   \end{frame}
+  \section{First Section}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{First Frame}
+    Hello, world!
+  \end{frame}
+% --------------------------------------------------------------------------- %
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+% --------------------------------------------------------------------------- %
+
 \end{document}
