@@ -4,11 +4,13 @@ SHOWPDF = open
 PDF2PS = pdf2ps
 PS2PDF = ps2pdf
 
-default: pdf
+default: pdf open
 
 pdf:
 	@echo "This Makefile generates pdf for *.tex"
 	@$(XELATEX) slides.tex
+
+open:
 	@$(SHOWPDF) slides.pdf
 
 clean:
