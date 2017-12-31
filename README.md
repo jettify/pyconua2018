@@ -9,5 +9,6 @@ Copy contents of repository to the separate folder, edit `slides.tex` then
 compile it with `xlatex` using command:
 
 ```bash
-$ make
+$ make lint
+$ make pdf
 ```

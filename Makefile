@@ -3,8 +3,10 @@ XELATEX = xelatex
 SHOWPDF = open
 PDF2PS = pdf2ps
 PS2PDF = ps2pdf
+CHKTEX = chktex
+LACHECK = lacheck
 
-default: pdf open
+default: lint pdf open
 
 pdf:
 	@echo "This Makefile generates pdf for *.tex"
@@ -20,3 +22,6 @@ compress:
 	@echo "Compressing pdf"
 	@$(PDF2PS) slides.pdf slides.ps
 	@$(PS2PDF) slides.ps slides.pdf
+
+lint:
+	@$(CHKTEX) slides.tex
