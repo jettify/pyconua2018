@@ -1,5 +1,5 @@
 \documentclass[12pt]{beamer}
-\usetheme[titleformat=allcaps]{metropolis}           % Use metropolis theme
+\usetheme[titleformat=allcaps]{metropolis}
 
 % make title separator line invisible
 \makeatletter
@@ -8,19 +8,21 @@
 
 % make background color wihite so avatar
 % background blend with background color
-\setbeamercolor{background canvas}{bg=white}
+% \setbeamercolor{background canvas}{bg=white}
 \usepackage{appendixnumberbeamer}
 
 % setup default font
-\usefonttheme{serif} % default family is serif
-\usepackage{fontspec}
-\setmainfont{Cochin}
+% \usefonttheme{serif} % default family is serif
+% \usepackage{fontspec}
+% \setmainfont{Cochin}
 
-\title{Introduction To \\ Distributed Tracing}
+
+\title{Introduction To \\ Formal Methods \\ with TLA+}
 \date{\today}
 \author{Nickolai Novik}
 \institute{\href{http://github.com/jettify}{http://github.com/jettify}}
-\titlegraphic{\hspace*{5cm} \includegraphics[height=8.5cm]{figures/avatar.pdf}}
+\titlegraphic{\hspace*{6cm} \includegraphics[height=8.5cm]{figures/avatar3.pdf}}
+
 % =========================================================================== %
 \begin{document}
   \maketitle
@@ -41,19 +43,19 @@
     \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Agenda}
-    \setbeamertemplate{section in toc}[sections numbered]
-    \tableofcontents[hideallsubsections]
+  \begin{frame}[squeeze]{Agenda}
+      \setbeamertemplate{section in toc}[sections numbered]
+      \tableofcontents
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Poll}
       \begin{large}
-          \textbf{How many of you heard of distributed tracing?}
+          \textbf{How many of you heard of formal methods?}
       \end{large}
     \begin{itemize}
-      \item I read Dapper paper.
-      \item I heard about this and know key ideas.
-      \item I think distributed tracing is kinda cool.
+      \item I used one on of: Coq, Isable, TLA+, Alloy, Spin.
+      \item I heard about it, but never used.
+      \item I think formal methods are kinda cool.
     \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
