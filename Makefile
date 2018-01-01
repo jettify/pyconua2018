@@ -16,7 +16,8 @@ open:
 	@$(SHOWPDF) slides.pdf
 
 clean:
-	rm -v -f *~ *.aux *.ps *.log *.dvi *.idx *.ilg *.ind *.toc *.nlo *.nls *.out *.backup
+	rm -v -f *~ *.aux *.ps *.log *.dvi *.idx *.ilg *.ind *.toc *.nlo *.nls \
+		*.out *.backup *.xdv *.snm  *.nav *.fls *.bbl *.blg *.fdb_latexmk
 
 compress:
 	@echo "Compressing pdf"
