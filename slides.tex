@@ -88,8 +88,16 @@
       \end{enumerate}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Slide Name}
-      text
+  \begin{frame}{Distributed algorithms extremely hard}
+      \textbf{Chord} is popular algorithm for P2P systems, paper published in
+      2001 by strong team of MIT researchers, 10 years later bug found
+      in specification \cite{stoica2001chord, Zave15}. Paper won best paper
+      awart.
+
+      \textbf{Snark} non-blocking deque algorithm, published by well known
+      researchers from Sun, clearly written sketch proof of the correctness
+      of the algorithm. Later significant issue was found in algorithm
+      \cite{doherty2004dcas, lamport2006checking}.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{Formal methods overview}
@@ -102,6 +110,18 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{Slide Name}
       text
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{AWS}
+      model checking at AWS
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Microsoft}
+      model checking at Microsoft, cosmoss db, xbox
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Opens source}
+      elastic search, mongodb, hadoop/yarn/
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{TLA+ For Engineer}
@@ -136,8 +156,15 @@
 % --------------------------------------------------------------------------- %
   \section{Conclusions}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Slide Name}
-      text
+  \begin{frame}{Model Checking Issues}
+    \begin{itemize}
+      \item Used as an adjunct to, not a replacement for, standard quality
+          assurance methods
+      \item Formal methods are not a panacea, but can increase confidence in
+          a product’s reliability if applied with care and skill
+      \item Very useful for consistency checks, but can not assure
+          completeness of a specification
+    \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
 \begin{frame}
