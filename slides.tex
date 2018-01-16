@@ -10,6 +10,7 @@
 % background blend with background color
 % \setbeamercolor{background canvas}{bg=white}
 \usepackage{appendixnumberbeamer}
+\usepackage{fancyvrb}
 
 % setup default font
 % \usefonttheme{serif} % default family is serif
@@ -117,10 +118,23 @@
   \section{Model Checking}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Slide Name}
-      text
+      \textbf{Model checking} is a technique for automatically verifying
+      correctness properties of finite-state systems.
+      \begin{center}
+          \includegraphics[scale=0.5]{figures/states-mc.png}
+          \includegraphics[scale=0.6]{figures/states-testing.png}
+      \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \section{Industry Examples}
+  \begin{frame}{Temporal Logic of Actions}
+      \begin{center}
+          \includegraphics[scale=0.3]{figures/lamport.jpg}
+      \end{center}
+      \textbf{TLA+} language developed by \textbf{Leslie Lamport}. It is
+      used to design, model, document, and verify concurrent systems, has
+      been described as exhaustively-testable pseudocode and blueprints
+      for software systems.
+  \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Slide Name}
       text
