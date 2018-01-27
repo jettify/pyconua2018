@@ -19,6 +19,14 @@
 % \setmainfont{Cochin}
 
 
+% change bibliography fonts, so references occupy less space on slides
+\setbeamerfont{bibliography entry author}{size=\tiny}
+\setbeamerfont{bibliography entry title}{size=\tiny}
+\setbeamerfont{bibliography entry location}{size=\tiny}
+\setbeamerfont{bibliography entry note}{size=\tiny}
+\setbeamerfont{bibliography item}{size=\tiny}
+
+
 \title{Introduction To \\ Model Checking \\ with TLA+}
 \date{\today}
 \author{Nickolai Novik}
@@ -234,7 +242,7 @@
 \end{frame}
 % --------------------------------------------------------------------------- %
 \appendix
-\begin{frame}[shrink=30]{References}
+\begin{frame}[allowframebreaks]{References}
     \bibliography{references}
     \bibliographystyle{abbrv}
 \end{frame}
