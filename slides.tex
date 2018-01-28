@@ -145,16 +145,7 @@
       for software systems.
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{TLA+ industry usage}
-      \begin{enumerate}
-          \item AWS
-          \item Microsoft
-          \item Open Source Projects
-          \item Intel/Digital/Compaq
-      \end{enumerate}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{AWS}
+  \begin{frame}{TLA+ industry usage: AWS}
     \begin{center}
        \includegraphics[scale=0.08]{figures/aws}
     \end{center}
@@ -162,7 +153,7 @@
      requiring traces of 35 steps. \cite{aws2014}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Microsoft}
+  \begin{frame}{TLA+ industry usage: Microsoft}
       MS used TLA+ to define consistency protocol for CosmosDB and memory
       allocator for XBox \cite{ms2017}
     \begin{center}
@@ -173,11 +164,18 @@
     \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Opens source}
+  \begin{frame}{TLA+ industry usage: Opens source}
       Number open source projects use TLA+ to verify complex algorithms:
-      * Elastic -- data replication protocol
-      * Mongodb -- data replication protocol
-      * Hadoop/YARN -- registry of long lived processes
+    \begin{itemize}
+        \item Elastic - data replication protocol \cite{elastic2017}
+        \item Mongodb - data replication protocol \cite{mongo2016}
+        \item Hadoop/YARN - registry of long lived processes \cite{hadoop2017}
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=0.1]{figures/mongo}
+        \includegraphics[scale=0.12]{figures/elastic}
+        \includegraphics[scale=0.14]{figures/hadoop}
+    \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{TLA+ Basics}
