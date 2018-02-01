@@ -192,8 +192,41 @@
       x
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Slide Name}
-      xxx
+  \begin{frame}{TLA+ syntax. Logic}
+      Basic logical operators:
+      \begin{description}
+        \item[$\lor$] logical OR, $or$ in python
+        \item[$\land$] logical AND, $and$ and in python
+        \item[$\lnot$] logical NOT, $and$ and in python
+        \item[$=$] boolean operator, checks equality, it is not an assignment operator.
+        \item[$\triangleq$] boolean operator, checks equality, it is not an assignment operator.
+      \end{description}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{TLA+ syntax. More Logic}
+      More logic operators:
+      \begin{description}
+        \item[$\exists$] means "there exists", written as E in ASCII
+        \item[$\forall$]  means "for all", written as A in ASCII
+        \item[$:$] colon reads as "such that"
+      \end{description}
+      $\exists x \in {1,2,3,4,5} : x > 3$ - exists $x$ in
+      set of integers ${1,2,3,4,5}$ such that $x > 3$ expression evaluates
+      to TRUE.
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{TLA+ syntax. More Logic}
+      More logic operators:
+      \begin{description}
+        \item[$\square$] formula is TRUE on each step
+        \item[$\Diamond$] eventually TRUE
+        \item[$\implies$] logical implication
+        \item[$'$] reads as prime, state of variable on next step
+
+      \end{description}
+      $\exists x \in {1,2,3,4,5} : x > 3$ - exists $x$ in
+      set of integers ${1,2,3,4,5}$ such that $x > 3$ expression evaluates
+      to TRUE.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{TLA+ aiorwlock story}
