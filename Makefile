@@ -1,5 +1,5 @@
 PDF2LATEX = pdflatex
-XELATEX = xelatex
+XELATEX = xelatex -shell-escape
 SHOWPDF = open
 PDF2PS = pdf2ps
 PS2PDF = ps2pdf

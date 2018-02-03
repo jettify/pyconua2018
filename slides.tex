@@ -10,8 +10,8 @@
 % background blend with background color
 % \setbeamercolor{background canvas}{bg=white}
 \usepackage{appendixnumberbeamer}
-\usepackage{fancyvrb}
 \usepackage{url}
+\usepackage{minted}
 
 % setup default font
 % \usefonttheme{serif} % default family is serif
@@ -182,7 +182,7 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ hello worlds}
     \begin{center}
-      \VerbatimInput[fontsize=\scriptsize]{figures/hourclock.tla}
+      \inputminted[linenos,fontsize=\scriptsize]{tla}{figures/hourclock.tla}
       \includegraphics[scale=0.8]{figures/hourclock.pdf}
     \end{center}
   \end{frame}
