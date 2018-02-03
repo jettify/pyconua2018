@@ -219,21 +219,35 @@
         \item[$'$] reads as prime, state of variable on next step
 
       \end{description}
-      $\exists x \in {1,2,3,4,5} : x > 3$ - exists $x$ in
-      set of integers ${1,2,3,4,5}$ such that $x > 3$ expression evaluates
-      to TRUE.
+      $\exists x \in {1,2,3,4,5} : x > 3$~-- exists $x$ in
+      set of integers ${1,2,3,4,5}$ such that $x > 3$ expression evaluates to TRUE.
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \section{TLA+ aiorwlock story}
+  \section{aiorwlock}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock - read write lock for asyncio}
-      \VerbatimInput[fontsize=\footnotesize]{figures/hourclock.tla}
+  \begin{frame}[fragile]{aiorwlock~-- read write lock for asyncio}
+      An RW lock allows concurrent access for read-only operations,
+      while write operations require exclusive access, simple example:
+      \inputminted[linenos,fontsize=\scriptsize]{python}{figures/lock.py}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \section{TLA+ threads story}
+  \begin{frame}{aiorwlock~-- bug}
+      \begin{center}
+        \includegraphics[scale=0.40]{figures/aiorwlock_bug}
+      \end{center}
+  \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Slide Name}
-      text
+  \begin{frame}{aiorwlock possible states}
+      \begin{center}
+          \includegraphics[scale=0.15]{figures/task_states2}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{aiorwlock implementation sketch}
+      Full implementation available in~\cite{jettify2016}
+      \begin{center}
+          \inputminted[linenos,fontsize=\scriptsize]{python}{figures/read.py}
+      \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{aiorwlock TLA spec: part 1}
