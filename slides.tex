@@ -292,8 +292,40 @@
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{aiorwlock trace}
+      TLC shows all steps that leads to \textit{invariant violation}.
       \begin{center}
-          \includegraphics[scale=0.50]{figures/tla_trace}
+          \includegraphics[scale=0.45]{figures/tla_trace}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{aiorwlock spec results}
+    \begin{itemize}
+      \item In fact bug reveled itself on specification phase, before
+          running any models
+      \item Only three steps required to reproduce issue
+    \end{itemize}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \section{Multithreading Queue Spec}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Multithreading Queue}
+      Bounded queue, multiple producers and consumers
+      \begin{center}
+          \includegraphics[scale=0.45]{figures/queue}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Queue implementation, part 1}
+      \begin{center}
+          \inputminted[firstline=1,lastline=20,linenos,
+            fontsize=\scriptsize]{python}{figures/queue.py}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Queue implementation, part 2}
+      \begin{center}
+          \inputminted[firstline=22,lastline=40,linenos,
+            fontsize=\scriptsize]{python}{figures/queue.py}
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
