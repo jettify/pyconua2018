@@ -309,9 +309,10 @@
   \section{Multithreading Queue Spec}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Multithreading Queue}
-      Bounded queue, multiple producers and consumers
+      Classic \textit{bounded buffer}, attempts to put an element into a
+      full queue or take from empty will block.
       \begin{center}
-          \includegraphics[scale=0.45]{figures/queue}
+          \includegraphics[scale=0.30]{figures/queue}
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
