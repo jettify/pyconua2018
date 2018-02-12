@@ -351,16 +351,32 @@
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
+  \begin{frame}{Multithreading Queue Spec Results}
+    \begin{itemize}
+      \item In fact bug reveled itself on specification phase, before running any models
+      \item More than \textbf{40 steps} required to reproduce deadlock!
+      \item Thread programming is hard!
+    \end{itemize}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Queue trace}
+      TLC shows all steps that leads to \textit{invariant violation}.
+      \begin{center}
+          \includegraphics[scale=0.45]{figures/tla_trace}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
   \section{Conclusions}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Model Checking Warning}
+  \begin{frame}{Limitations of Model-Checking}
     \begin{itemize}
+      \item State space explosion number of states reachable by a system
+          can quickly become huge, or even infinite
       \item Used as an adjunct to, not a replacement for, standard quality
           assurance methods
       \item Formal methods are not a panacea, but can increase confidence in
           a product’s reliability if applied with care and skill
-      \item Very useful for consistency checks, but can not assure
-          completeness
+      \item Very useful for consistency checks, but can not assure completeness
     \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
