@@ -93,7 +93,7 @@
           \item Code coverage
           \item Code review
           \item Stress testing
-          \item Fault-injection testing
+          \item Fault-injection testing \cite{principlesofchaos}
       \end{enumerate}
   \end{frame}
 % --------------------------------------------------------------------------- %
@@ -167,15 +167,27 @@
   \begin{frame}{TLA+ industry usage: Opens source}
       Number open source projects use TLA+ to verify complex algorithms:
     \begin{itemize}
-        \item **Elastic** -- data replication protocol~\cite{elastic2017}
-        \item **Mongodb** -- data replication protocol~\cite{mongo2016}
-        \item **Hadoop/YARN** -- registry of long lived processes~\cite{hadoop2017}
+        \item \textbf{Elastic} -- data replication protocol~\cite{elastic2017}
+        \item \textbf{Mongodb} -- data replication protocol~\cite{mongo2016}
+        \item \textbf{Hadoop/YARN} -- registry of long lived processes~\cite{hadoop2017}
     \end{itemize}
     \begin{center}
         \includegraphics[scale=0.1]{figures/mongo}
         \includegraphics[scale=0.12]{figures/elastic}
         \includegraphics[scale=0.14]{figures/hadoop}
     \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{TLA+ Description}
+      \textbf{TLA+} fulfills the same purpose as informal technical
+      specifications, written in a formal language of logic and mathematics
+      \begin{description}[align=right]
+        \item [Released] April 23, 1999; 18 years ago
+        \item [Syntax] math notation, similar to \LaTeX
+        \item [Implem.] Java
+        \item [License] MIT
+        \item [IDE] TLA Toolbox (Eclipse based) \cite{azurewebsites}
+      \end{description}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{TLA+ Basics}
