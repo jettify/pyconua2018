@@ -97,26 +97,32 @@
       \end{enumerate}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Distributed/Parallel algorithms extremely hard}
+  \begin{frame}{Distributed algorithms extremely hard}
+      \begin{center}
+          \includegraphics[scale=0.3]{figures/chord_paper.png}
+      \end{center}
       \begin{alertblock}{Chord}
           is popular algorithm for P2P systems, paper published in
           2001 by strong team of MIT researchers, 10 years later bug found
           in specification~\cite{stoica2001chord, Zave15}. Paper won best
           paper award.
       \end{alertblock}
-      \begin{alertblock}{Snark}
-          non-blocking deque algorithm, published by well known
-          researchers from Sun, clearly written sketch proof of the correctness
-          of the algorithm. Later significant issue was found in algorithm
-          ~\cite{doherty2004dcas, lamport2006checking}.
-      \end{alertblock}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Sometimes cost of error is very high}
+      \begin{center}
+          \includegraphics[scale=0.12]{figures/pathfinder.jpg}
+      \end{center}
       \begin{alertblock}{Mars Pathfinder}
           rover, the mission was jeopardised by a concurrent
           software bug in the lander.~\cite{Pathfinder2013}
       \end{alertblock}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Sometimes cost of error is very high 2}
+      \begin{center}
+          \includegraphics[scale=0.5]{figures/therac.jpg}
+      \end{center}
       \begin{alertblock}{Therac-25}
           radiation therapy machine, because of concurrent
           programming errors, it sometimes gave its patients radiation doses
