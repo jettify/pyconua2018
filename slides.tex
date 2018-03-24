@@ -211,13 +211,25 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ syntax. Logic}
       Basic logical operators:
-      \begin{description}
-        \item[$\lor$] logical OR, $or$ in python
-        \item[$\land$] logical AND, $and$ and in python
-        \item[$\lnot$] logical NOT, $and$ and in python
-        \item[$=$] boolean operator, checks equality, it is not an assignment operator.
-        \item[$\triangleq$] boolean operator, checks equality, it is not an assignment operator.
-      \end{description}
+        \begin{table}
+        \centering
+            \begin{tabular}{@{} llp{7cm} @{}}
+                Symb.       & Python & Description   \\ \hline
+                $\lor$      & \mintinline{python}{or} &logical OR \\
+                $\land$     & \mintinline{python}{and} &logical AND \\
+                $\lnot$     & \mintinline{python}{not} &logical NOT \\
+                $=$         & \mintinline{python}{==} & boolean operator, checks equality, it is not an assignment operator. \\
+                $\triangleq$& \mintinline{python}{=} &boolean operator, checks equality, it is not an assignment operator.
+
+            \end{tabular}
+        \end{table}
+
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Exercise}
+    \begin{center}
+        $ \only<1>{FALSE \land}\only<2>{\boxed{FALSE \land}} (TRUE \land (FALSE \lor TRUE) \lor (TRUE \lor FALSE)) =  \boxed{\only<1>{??}\only<2>{FALSE}}$
+    \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ syntax. More Logic}
