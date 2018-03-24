@@ -12,6 +12,7 @@
 \usepackage{appendixnumberbeamer}
 \usepackage{url}
 \usepackage{minted}
+\usepackage{tikz}
 
 % setup default font
 % \usefonttheme{serif} % default family is serif
@@ -132,7 +133,22 @@
 % --------------------------------------------------------------------------- %
   \section{Model Checking}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Slide Name}
+  \begin{frame}{Formal Methods}
+    \textbf{Formal Methods} - techniques and tools based on mathematics
+      and formal logic \cite{mit2002}.
+      \begin{center}
+          \begin{tikzpicture}[sibling distance=10em, every node/.style = {
+                  shape=rectangle, rounded corners, draw, align=center,
+                  top color=white, bottom color=blue!5}]]
+              \node {Formal Methods}
+                child {node {Formal Spec}}
+                child {node {Formal Proof}}
+                child {node {Model checking} };
+          \end{tikzpicture}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Model checking}
       \textbf{Model checking} is a technique for automatically verifying
       correctness properties of finite-state systems.
       \begin{center}
@@ -259,7 +275,7 @@
                 $\square$  & formula is TRUE on each step [] in ASCII   \\
                 $\Diamond$ & eventually TRUE \\
                 $\implies$ & logical implication \mintinline{python}{x_imp_y = y if x else True}\\
-                $'$        & reads as prime, state of variable on next step \mintinline{latex}{x = x + 1}
+                \boxed{$'$}& reads as prime, state of variable on next step \mintinline{latex}{x = x + 1}
             \end{tabular}
         \end{table}
             \texttt{Init /\textbackslash [][Next]\_hr} formula true on each steup for temporal variable \texttt{hr}
