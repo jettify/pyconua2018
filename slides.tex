@@ -234,11 +234,16 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ syntax. More Logic}
       More logic operators:
-      \begin{description}
-        \item[$\exists$] means "there exists", written as E in ASCII
-        \item[$\forall$]  means "for all", written as A in ASCII
-        \item[$:$] colon reads as "such that"
-      \end{description}
+        \begin{table}
+        \centering
+            \begin{tabular}{@{} llp{7cm} @{}}
+                Symb.  & Python & Description   \\ \hline
+                $\exists$ & \mintinline{python}{any()} & means "there exists", written as \texttt{\textbackslash E} in ASCII \\
+                $\forall$ & \mintinline{python}{all()} & means "for all", written as \textbackslash A in ASCII \\
+                $:$       &                            & reads as "such that"
+            \end{tabular}
+        \end{table}
+
       $\exists x \in {1,2,3,4,5} : x > 3$ - exists $x$ in
       set of integers ${1,2,3,4,5}$ such that $x > 3$ expression evaluates
       to TRUE.
@@ -246,15 +251,18 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ syntax. More Logic}
       More logic operators:
-      \begin{description}
-        \item[$\square$] formula is TRUE on each step
-        \item[$\Diamond$] eventually TRUE
-        \item[$\implies$] logical implication
-        \item[$'$] reads as prime, state of variable on next step
-
-      \end{description}
-      $\exists x \in {1,2,3,4,5} : x > 3$~-- exists $x$ in
-      set of integers ${1,2,3,4,5}$ such that $x > 3$ expression evaluates to TRUE.
+        \begin{table}
+        \centering
+            % \begin{tabular}{|l|p{9cm}|}
+            \begin{tabular}{@{} lp{9cm} @{}}
+                Operator   & Description   \\ \hline
+                $\square$  & formula is TRUE on each step [] in ASCII   \\
+                $\Diamond$ & eventually TRUE \\
+                $\implies$ & logical implication \mintinline{python}{x_imp_y = y if x else True}\\
+                $'$        & reads as prime, state of variable on next step \mintinline{latex}{x = x + 1}
+            \end{tabular}
+        \end{table}
+            \texttt{Init /\textbackslash [][Next]\_hr} formula true on each steup for temporal variable \texttt{hr}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ Spec Template}
