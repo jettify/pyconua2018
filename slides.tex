@@ -271,83 +271,6 @@
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \section{Aiorwlock Spec}
-% --------------------------------------------------------------------------- %
-  \begin{frame}[fragile]{aiorwlock~-- read write lock for asyncio}
-      An RW lock allows concurrent access for read-only operations,
-      while write operations require exclusive access, simple example:
-      \inputminted[linenos,fontsize=\scriptsize]{python}{figures/lock.py}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock~-- bug}
-      \begin{center}
-        \includegraphics[scale=0.40]{figures/aiorwlock_bug}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock possible states}
-      Read Write lock state machine:
-      \begin{center}
-          \includegraphics[scale=0.15]{figures/task_states2}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock implementation sketch}
-      Full implementation available in~\cite{jettify2016}
-      \begin{center}
-          \inputminted[linenos,fontsize=\scriptsize]{python}{figures/read.py}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock TLA spec: part 1}
-      \begin{center}
-          \inputminted[firstline=1,lastline=19,linenos,
-            fontsize=\scriptsize]{tla}{figures/aiorwlock.tla}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock TLA spec: part 2}
-      \begin{center}
-          \inputminted[firstline=20,lastline=31,linenos,
-            fontsize=\scriptsize]{tla}{figures/aiorwlock.tla}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock TLA spec: part 3}
-      \begin{center}
-          \inputminted[firstline=34,lastline=47,linenos,
-            fontsize=\scriptsize]{tla}{figures/aiorwlock.tla}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock TLA spec: part 4}
-      \begin{center}
-          \inputminted[firstline=47,lastline=58,linenos,
-            fontsize=\scriptsize]{tla}{figures/aiorwlock.tla}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock possible states}
-      \begin{center}
-          \includegraphics[scale=0.35,angle=90]{figures/aiorwlock_model}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock trace}
-      TLC shows all steps that leads to \textit{invariant violation}.
-      \begin{center}
-          \includegraphics[scale=0.45]{figures/tla_trace}
-      \end{center}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock spec results}
-    \begin{itemize}
-      \item In fact bug reveled itself on specification phase, before
-          running any models
-      \item Only three steps required to reproduce issue
-    \end{itemize}
-  \end{frame}
-% --------------------------------------------------------------------------- %
   \section{Multithreading Queue Spec}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Multithreading Queue}
@@ -404,8 +327,50 @@
   \begin{frame}{Queue trace}
       TLC shows all steps that leads to \textit{invariant violation}.
       \begin{center}
+          \includegraphics[scale=0.42]{figures/buffer_trace}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \section{Aiorwlock Spec}
+% --------------------------------------------------------------------------- %
+  \begin{frame}[fragile]{aiorwlock~-- read write lock for asyncio}
+      An RW lock allows concurrent access for read-only operations,
+      while write operations require exclusive access, simple example:
+      \inputminted[linenos,fontsize=\scriptsize]{python}{figures/lock.py}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{aiorwlock~-- bug}
+      \begin{center}
+        \includegraphics[scale=0.40]{figures/aiorwlock_bug}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{aiorwlock possible states}
+      Read Write lock state machine:
+      \begin{center}
+          \includegraphics[scale=0.15]{figures/task_states2}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{aiorwlock possible states}
+      \begin{center}
+          \includegraphics[scale=0.35,angle=90]{figures/aiorwlock_model}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{aiorwlock trace}
+      TLC shows all steps that leads to \textit{invariant violation}.
+      \begin{center}
           \includegraphics[scale=0.45]{figures/tla_trace}
       \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{aiorwlock spec results}
+    \begin{itemize}
+      \item In fact bug reveled itself on specification phase, before
+          running any models
+      \item Only three steps required to reproduce issue
+    \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{Conclusions}
