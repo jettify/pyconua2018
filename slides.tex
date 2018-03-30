@@ -350,7 +350,7 @@
 % --------------------------------------------------------------------------- %
   \section{Aiorwlock Spec}
 % --------------------------------------------------------------------------- %
-  \begin{frame}[fragile]{aiorwlock~-- read write lock for asyncio}
+  \begin{frame}[fragile]{aiorwlock~-- read write lock for \\ asyncio}
       An RW lock allows concurrent access for read-only operations,
       while write operations require exclusive access, simple example:
       \inputminted[linenos,fontsize=\scriptsize]{python}{figures/lock.py}
@@ -369,16 +369,16 @@
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock possible states}
+  \begin{frame}{aiorwlock trace}
+      TLC shows \textit{invariant violation} on step 33!
       \begin{center}
-          \includegraphics[scale=0.35,angle=90]{figures/aiorwlock_model}
+          \includegraphics[scale=0.45]{figures/tla_trace}
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock trace}
-      TLC shows all steps that leads to \textit{invariant violation}.
+  \begin{frame}{aiorwlock possible states}
       \begin{center}
-          \includegraphics[scale=0.45]{figures/tla_trace}
+          \includegraphics[scale=0.35,angle=90]{figures/aiorwlock_model}
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
