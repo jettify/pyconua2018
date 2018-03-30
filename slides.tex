@@ -235,7 +235,7 @@
                 $\land$     & \mintinline{python}{and} &logical AND \\
                 $\lnot$     & \mintinline{python}{not} &logical NOT \\
                 $=$         & \mintinline{python}{==} & boolean operator, checks equality, it is not an assignment operator. \\
-                $\triangleq$& \mintinline{python}{=} &boolean operator, checks equality, it is not an assignment operator.
+                $\triangleq$& \mintinline{python}{=} & means defined to equal.
 
             \end{tabular}
         \end{table}
@@ -327,9 +327,17 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 3}
       \begin{center}
-          \inputminted[firstline=32,lastline=50,linenos,
+          \inputminted[firstline=32,lastline=42,linenos,
             fontsize=\scriptsize]{tla}{figures/buffer.tla}
       \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Queue TLA spec: part 4}
+      \begin{center}
+          \inputminted[firstline=43,lastline=50,linenos,
+            fontsize=\scriptsize]{tla}{figures/buffer.tla}
+      \end{center}
+      Invariant definition
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue trace}
