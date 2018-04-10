@@ -203,6 +203,14 @@
     \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
+  \begin{frame}{RAFT and TLA+}
+    \begin{center}
+          \inputminted[firstline=452,lastline=461,linenos,
+            fontsize=\scriptsize]{tla}{figures/raft.tla}
+    \end{center}
+      RAFT - core algorithm of consul, etcd also verified with TLA+.
+  \end{frame}
+% --------------------------------------------------------------------------- %
   \section{TLA+ Basics}
 % --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ hello worlds}
@@ -362,7 +370,7 @@
       \item Thread programming is hard.
       \item More than \textbf{30 steps} required to reproduce deadlock!
       \item Notify all strategy fixes issue with deadlock.
-      \item In number of threads > 2 * buffer capacity algorithm is not deadlock free.
+      \item If number of threads > 2 * buffer capacity algorithm is not deadlock free.
     \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
