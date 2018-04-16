@@ -189,15 +189,19 @@
     \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{TLA+ industry usage: Opens source}
-      Number open source projects use TLA+ to verify complex algorithms:
+  \begin{frame}{TLA+ industry usage: Open-source}
+      Open source projects use TLA+ to verify algorithms:
     \begin{itemize}
+        \item \textbf{Linux Kernel} -- verify fairness of qspinlock ~\cite{lkml2018}
         \item \textbf{Elastic} -- data replication protocol~\cite{elastic2017}
         \item \textbf{Mongodb} -- data replication protocol~\cite{mongo2016}
         \item \textbf{Hadoop/YARN} -- registry of long lived processes~\cite{hadoop2017}
     \end{itemize}
     \begin{center}
+        \includegraphics[scale=0.07]{figures/tux}
         \includegraphics[scale=0.1]{figures/mongo}
+    \end{center}
+    \begin{center}
         \includegraphics[scale=0.12]{figures/elastic}
         \includegraphics[scale=0.14]{figures/hadoop}
     \end{center}
@@ -208,7 +212,8 @@
           \inputminted[firstline=452,lastline=461,linenos,
             fontsize=\scriptsize]{tla}{figures/raft.tla}
     \end{center}
-      RAFT - core algorithm of consul, etcd also verified with TLA+.
+      RAFT - core algorithm of \textbf{consul}, \textbf{etcd} also verified
+      with TLA+.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{TLA+ Basics}
@@ -234,7 +239,6 @@
 
             \end{tabular}
         \end{table}
-
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Exercise}
@@ -268,7 +272,6 @@
             \begin{tabular}{@{} lp{9cm} @{}}
                 Operator   & Description   \\ \hline
                 $\square$  & formula is TRUE on each step [] in ASCII   \\
-                $\Diamond$ & eventually TRUE \\
                 $\implies$ & logical implication \mintinline{python}{x_imp_y = y if x else True}\\
                 \boxed{$'$}& reads as prime, state of variable on next step \mintinline{latex}{x = x + 1}
             \end{tabular}
