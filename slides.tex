@@ -279,6 +279,20 @@
             \texttt{Init /\textbackslash [][Next]\_hr} formula true on each steup for temporal variable \texttt{hr}
   \end{frame}
 % --------------------------------------------------------------------------- %
+  \begin{frame}{TLA+ syntax. Sets}
+      Basic set operations:
+        \begin{table}
+        \centering
+            \begin{tabular}{@{} llp{7cm} @{}}
+                Symb.       & Python & Description   \\ \hline
+                $S \cup T$      & \mintinline{python}{s.union(t)} & Union\\
+                $S \cap T$      & \mintinline{python}{s.intersection(t)} & Intersection \\
+                $S \subseteq T$ & \mintinline{python}{s in t} & Membership  \\
+                $S \setminus T$ & \mintinline{python}{s.difference(t)} & Difference \\
+            \end{tabular}
+        \end{table}
+  \end{frame}
+% --------------------------------------------------------------------------- %
   \begin{frame}{TLA+ Spec Template}
       \begin{center}
           \inputminted[linenos, fontsize=\scriptsize]{tla}{figures/template.tla}
@@ -407,11 +421,11 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{aiorwlock trace}
       \begin{center}
-          \includegraphics[scale=0.45]{figures/tla_trace}
+          \includegraphics[scale=0.50]{figures/tla_trace}
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock possible states}
+  \begin{frame}{aiorwlock possible states for 2 tasks}
       \begin{center}
           \includegraphics[scale=0.35,angle=90]{figures/aiorwlock_model}
       \end{center}
@@ -443,7 +457,7 @@
 \begin{frame}
     \vspace{1cm}
     \begin{center}{\Huge Questions?} \end{center}
-    \begin{center} \includegraphics[scale=0.7]{figures/qrcode}\end{center}
+    \begin{center} \includegraphics[scale=0.4]{figures/qrcode.png}\end{center}
     \begin{center}
         \href{http://github.com/jettify}{http://github.com/jettify}
     \end{center}
