@@ -230,13 +230,13 @@
       Basic logical operators:
         \begin{table}
         \centering
-            \begin{tabular}{@{} llp{7cm} @{}}
-                Symb.       & Python & Description   \\ \hline
-                $\lor$      & \mintinline{python}{or} &logical OR \\
-                $\land$     & \mintinline{python}{and} &logical AND \\
-                $\lnot$     & \mintinline{python}{not} &logical NOT \\
-                $=$         & \mintinline{python}{==} & boolean operator, checks equality, it is not an assignment operator. \\
-                $\triangleq$& \mintinline{python}{=} & means defined to equal.
+            \begin{tabular}{@{} lllp{7cm} @{}}
+                Symb.         & ASCII                       & Python & Description   \\ \hline
+                $\lor$        & \texttt{\textbackslash /}   & \mintinline{python}{or} &logical OR \\
+                $\land$       & \texttt{/\textbackslash}   & \mintinline{python}{and} &logical AND \\
+                $\lnot$       & \texttt{~}                  & \mintinline{python}{not} &logical NOT \\
+                $=$           & \texttt{=}                  & \mintinline{python}{==} & boolean operator, checks equality, it is not an assignment operator. \\
+                $\triangleq$  & \texttt{==}                 & \mintinline{python}{=} & means defined to equal.
 
             \end{tabular}
         \end{table}
@@ -252,11 +252,11 @@
       More logic operators:
         \begin{table}
         \centering
-            \begin{tabular}{@{} llp{7cm} @{}}
-                Symb.  & Python & Description   \\ \hline
-                $\exists$ & \mintinline{python}{any()} & means "there exists", written as \texttt{\textbackslash E} in ASCII \\
-                $\forall$ & \mintinline{python}{all()} & means "for all", written as \textbackslash A in ASCII \\
-                $:$       &                            & reads as "such that"
+            \begin{tabular}{@{} lllp{7cm} @{}}
+                Symb.     & ASCII                     & Python                     & Description   \\ \hline
+                $\exists$ & \texttt{\textbackslash E} & \mintinline{python}{any()} & means "there exists"\\
+                $\forall$ & \texttt{\textbackslash A} & \mintinline{python}{all()} & means "for all"\\
+                $:$       & $:$                       &                            & reads as "such that"
             \end{tabular}
         \end{table}
 
@@ -270,11 +270,12 @@
         \begin{table}
         \centering
             % \begin{tabular}{|l|p{9cm}|}
-            \begin{tabular}{@{} lp{9cm} @{}}
-                Operator   & Description   \\ \hline
-                $\square$  & formula is TRUE on each step [] in ASCII   \\
-                $\implies$ & logical implication \mintinline{python}{x_imp_y = y if x else True}\\
-                \boxed{$'$}& reads as prime, state of variable on next step \mintinline{latex}{x' = x + 1}
+            \begin{tabular}{@{} llp{9cm} @{}}
+                Operator    & ASCII       & Description   \\ \hline
+                $\square$   & \texttt{[]} & formula is TRUE on each step  \\
+                $\implies$  & \texttt{=>} & implication \mintinline{python}{x_imp_y = y if x else True}\\
+                \boxed{$'$} & \texttt{'}  & reads as prime, state of variable on \\
+                            &             & next step \mintinline{latex}{x' = x + 1}\\
             \end{tabular}
         \end{table}
             \texttt{Init /\textbackslash [][Next]\_hr} formula true on each steup for temporal variable \texttt{hr}
@@ -284,12 +285,12 @@
       Basic set operations:
         \begin{table}
         \centering
-            \begin{tabular}{@{} llp{7cm} @{}}
-                Symb.       & Python & Description   \\ \hline
-                $S \cup T$      & \mintinline{python}{s.union(t)} & Union\\
-                $S \cap T$      & \mintinline{python}{s.intersection(t)} & Intersection \\
-                $S \subseteq T$ & \mintinline{python}{s in t} & Membership  \\
-                $S \setminus T$ & \mintinline{python}{s.difference(t)} & Difference \\
+            \begin{tabular}{@{} lllp{7cm} @{}}
+                Symb.           & ASCII                              & Python                                & Description   \\ \hline
+                $S \cup T$      & \texttt{\textbackslash union}      &\mintinline{python}{s.union(t)}        & Union\\
+                $S \cap T$      & \texttt{\textbackslash intersect}  &\mintinline{python}{s.intersection(t)} & Intersection \\
+                $S \subseteq T$ & \texttt{\textbackslash supseteq}   &\mintinline{python}{s in t}            & Membership  \\
+                $S \setminus T$ & \texttt{\textbackslash}            &\mintinline{python}{s.difference(t)}   & Difference \\
             \end{tabular}
         \end{table}
   \end{frame}
@@ -451,7 +452,6 @@
           assurance methods
       \item Formal methods are not a panacea, but can increase confidence in
           a product’s reliability if applied with care and skill
-      \item Very useful for consistency checks, but can not assure completeness
     \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
