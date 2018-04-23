@@ -54,10 +54,10 @@
     \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}[squeeze]{Agenda}
-      \setbeamertemplate{section in toc}[sections numbered]
-      \tableofcontents
-  \end{frame}
+%  \begin{frame}[squeeze]{Agenda}
+%      \setbeamertemplate{section in toc}[sections numbered]
+%      \tableofcontents
+%  \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Poll}
       \begin{large}
@@ -74,15 +74,15 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{Concurrent and Distributed systems \\ are hard}
       \textbf{Most of industry uses following techniques for quality assurance:}
-      \begin{enumerate}
+      \begin{itemize}
           \item Design review
-          \item Static code analysis
-          \item Unit/Integration/Functional testing
-          \item Code coverage
           \item Code review
+          \item Unit/Integration/Functional testing
+          \item Static code analysis
+          \item Code coverage
           \item Stress testing
           \item Fault-injection testing \cite{principlesofchaos}
-      \end{enumerate}
+      \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Distributed algorithms extremely hard}
@@ -97,15 +97,15 @@
       \end{alertblock}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{Sometimes cost of error is very high}
-      \begin{center}
-          \includegraphics[scale=0.12]{figures/pathfinder.jpg}
-      \end{center}
-      \begin{alertblock}{Mars Pathfinder}
-          rover, the mission was jeopardised by a concurrent
-          software bug in the lander.~\cite{Pathfinder2013}
-      \end{alertblock}
-  \end{frame}
+%  \begin{frame}{Sometimes cost of error is very high}
+%      \begin{center}
+%          \includegraphics[scale=0.12]{figures/pathfinder.jpg}
+%      \end{center}
+%      \begin{alertblock}{Mars Pathfinder}
+%          rover, the mission was jeopardised by a concurrent
+%          software bug in the lander.~\cite{Pathfinder2013}
+%      \end{alertblock}
+%  \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Sometimes cost of error is very high 2}
       \begin{center}
@@ -208,14 +208,14 @@
     \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{RAFT and TLA+}
-    \begin{center}
-          \inputminted[firstline=452,lastline=461,linenos,
-            fontsize=\scriptsize]{tla}{figures/raft.tla}
-    \end{center}
-      RAFT - core algorithm of \textbf{consul}, \textbf{etcd} also verified
-      with TLA+.
-  \end{frame}
+%  \begin{frame}{RAFT and TLA+}
+%    \begin{center}
+%          \inputminted[firstline=452,lastline=461,linenos,
+%            fontsize=\scriptsize]{tla}{figures/raft.tla}
+%    \end{center}
+%      RAFT - core algorithm of \textbf{consul}, \textbf{etcd} also verified
+%      with TLA+.
+%  \end{frame}
 % --------------------------------------------------------------------------- %
   \section{TLA+ Basics}
 % --------------------------------------------------------------------------- %
