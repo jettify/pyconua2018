@@ -373,6 +373,8 @@
       \item Condition variable shared between producers and consumer
       \item On producer signal other producer make wake up instead of consumer
       \item Bug is very hard to reproduce since 30 specific steps need to happen
+      \item \textit{NotifyAll} strategy fixes issue with deadlock.
+      \item If number of threads > 2 * buffer capacity algorithm is not deadlock free.
     \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
@@ -389,15 +391,6 @@
           \textit{Book: Programming with POSIX Threads by David R. Butenhof}
       \end{column}%
     \end{columns}
-  \end{frame}
-% --------------------------------------------------------------------------- %
-  \begin{frame}{Multithreading Queue Spec Results}
-    \begin{itemize}
-      \item Thread programming is hard.
-      \item More than \textbf{30 steps} required to reproduce deadlock!
-      \item Notify all strategy fixes issue with deadlock.
-      \item If number of threads > 2 * buffer capacity algorithm is not deadlock free.
-    \end{itemize}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \section{Aiorwlock Spec}
