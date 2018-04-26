@@ -337,6 +337,7 @@
           \inputminted[firstline=1,lastline=16,linenos,
             fontsize=\scriptsize]{tla}{figures/buffer.tla}
       \end{center}
+      Imports and variables definitions.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 2}
@@ -344,6 +345,7 @@
           \inputminted[firstline=16,lastline=31,linenos,
             fontsize=\scriptsize]{tla}{figures/buffer.tla}
       \end{center}
+      Helper formulas.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 3}
@@ -351,6 +353,7 @@
           \inputminted[firstline=32,lastline=42,linenos,
             fontsize=\scriptsize]{tla}{figures/buffer.tla}
       \end{center}
+      Initial conditions and main methods specification.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 4}
@@ -439,11 +442,10 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{Limitations of Model-Checking}
     \begin{itemize}
-      \item State space explosion number of states reachable by a system
+        \item \textbf{State space explosion} number of states reachable by a system
           can quickly become huge, or even infinite
-      \item Used as an adjunct to, not a replacement for, standard quality
-          assurance methods
-      \item Formal methods are not a panacea, but can increase confidence in
+      \item \textbf{Not a replacement for tests} or other standard quality assurance methods
+      \item \textbf{Formal methods are not a panacea}, but can increase confidence in
           a product’s reliability if applied with care and skill
     \end{itemize}
   \end{frame}
