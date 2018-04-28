@@ -313,15 +313,21 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue implementation, part 1}
       \begin{center}
-          \inputminted[firstline=1,lastline=20,linenos,
+          \inputminted[firstline=3,lastline=20,linenos,
             fontsize=\scriptsize]{python}{figures/queue.py}
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue implementation, part 2}
       \begin{center}
-          \inputminted[firstline=22,lastline=40,linenos,
-            fontsize=\scriptsize]{python}{figures/queue.py}
+          % \inputminted[firstline=22,lastline=40,linenos,
+          \inputminted[firstline=22,lastline=30,linenos, fontsize=\small]{python}{figures/queue.py}
+      \end{center}
+  \end{frame}
+% --------------------------------------------------------------------------- %
+  \begin{frame}{Queue implementation, part 2}
+      \begin{center}
+          \inputminted[firstline=30,lastline=40,linenos, fontsize=\small]{python}{figures/queue.py}
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
@@ -334,26 +340,23 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 1}
       \begin{center}
-          \inputminted[firstline=1,lastline=16,linenos,
-            fontsize=\scriptsize]{tla}{figures/buffer.tla}
+          \inputminted[firstline=1,lastline=15,linenos,
+            fontsize=\footnotesize]{tla}{figures/buffer.tla}
       \end{center}
-      Imports and variables definitions.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 2}
       \begin{center}
-          \inputminted[firstline=16,lastline=31,linenos,
-            fontsize=\scriptsize]{tla}{figures/buffer.tla}
+          \inputminted[firstline=17,lastline=30,linenos,
+            fontsize=\footnotesize]{tla}{figures/buffer.tla}
       \end{center}
-      Helper formulas.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 3}
       \begin{center}
           \inputminted[firstline=32,lastline=42,linenos,
-            fontsize=\scriptsize]{tla}{figures/buffer.tla}
+            fontsize=\footnotesize]{tla}{figures/buffer.tla}
       \end{center}
-      Initial conditions and main methods specification.
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue TLA spec: part 4}
@@ -361,7 +364,6 @@
           \inputminted[firstline=43,lastline=50,linenos,
             fontsize=\scriptsize]{tla}{figures/buffer.tla}
       \end{center}
-      Invariant definition
   \end{frame}
 % --------------------------------------------------------------------------- %
   \begin{frame}{Queue trace}
@@ -373,7 +375,7 @@
 % --------------------------------------------------------------------------- %
   \begin{frame}{The Bug}
     \begin{itemize}
-      \item Condition variable shared between producers and consumer
+        \item \textbf{Condition variable shared between producers and consumer}
       \item On producer signal other producer make wake up instead of consumer
       \item Bug is very hard to reproduce since 30 specific steps need to happen
       \item \textit{NotifyAll} strategy fixes issue with deadlock.
@@ -404,11 +406,11 @@
       \inputminted[linenos,fontsize=\scriptsize]{python}{figures/lock.py}
   \end{frame}
 % --------------------------------------------------------------------------- %
-%  \begin{frame}{aiorwlock~-- bug}
-%      \begin{center}
-%        \includegraphics[scale=0.40]{figures/aiorwlock_bug}
-%      \end{center}
-%  \end{frame}
+  \begin{frame}{aiorwlock~-- bug}
+      \begin{center}
+        \includegraphics[scale=0.40]{figures/aiorwlock_bug}
+      \end{center}
+  \end{frame}
 % --------------------------------------------------------------------------- %
 %  \begin{frame}{aiorwlock possible states}
 %      Read Write lock state machine:
@@ -429,14 +431,14 @@
       \end{center}
   \end{frame}
 % --------------------------------------------------------------------------- %
-  \begin{frame}{aiorwlock spec results}
-    \begin{itemize}
-      \item In fact bug reveled itself on specification phase, before
-          running any models.
-      \item Only three steps required to reproduce issue.
-      \item First aio-libs project with formal verification!
-    \end{itemize}
-  \end{frame}
+%  \begin{frame}{aiorwlock spec results}
+%    \begin{itemize}
+%      \item In fact bug reveled itself on specification phase, before
+%          running any models.
+%      \item Only three steps required to reproduce issue.
+%      \item First aio-libs project with formal verification!
+%    \end{itemize}
+%  \end{frame}
 % --------------------------------------------------------------------------- %
   \section{Conclusions}
 % --------------------------------------------------------------------------- %
