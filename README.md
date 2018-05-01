@@ -1,6 +1,6 @@
-# Slides Template
+# Verification of Concurrent and Distributed Systems
 
-LaTeX template for my presentations, using Beamer with Metropolis theme.
+Building correct concurrent and distributed systems is hard and very challenging task also high complexity of such software increases the probability of human error in design and architecture. On practice standard verification techniques in industry are necessary but not sufficient. In my talk we will discuss formal specification and verification language that helps engineers design, specify, reason about and verify complex, real-life algorithms and software systems.
 
 
 ## Usage
